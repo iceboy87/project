@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import 'controller.dart';
+import 'login.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,20 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
-        authController.checkLogin();
-
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Scaffold(
-            body: Center(child: CircularProgressIndicator()),
-          ),
+          home: LoginPage(), 
         );
       },
     );
   }
 }
-
-
-
-
-//https://jsonplaceholder.typicode.com/posts
