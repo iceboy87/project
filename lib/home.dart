@@ -11,11 +11,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("User Data"),
+        title: Text("User Data",style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: Icon(Icons.logout,color: Colors.white,),
             onPressed: () => authController.logout(),
           ),
         ],
