@@ -59,7 +59,7 @@ class UserController extends GetxController {
   Future<void> fetchUsers() async {
     try {
       isLoading(true);
-      final response = await _dio.get('/posts');
+      final response = await _dio.get('https://jsonplaceholder.typicode.com/posts');
       if (response.statusCode == 200) {
         List data = response.data;
         users.value = data.map((json) => User.fromJson(json)).toList();
